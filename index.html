@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div class="stage">
+        <div>
+            <div id="0" class="square"></div>
+            <div id="1" class="square"></div>
+            <div id="2" class="square"></div>
+        </div>
+        <div>
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div>
+        </div>
+        <div>
+            <div id="6" class="square"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square"></div>
+        </div>
+    </div>
+
+    <div id="result">
+        <div id="winner"></div>
+        <input id="restart" type="button" value="RESTART">
+    </div>
+</body>
+<script src="./scripts/game.js"></script>
+<script src="./scripts/interface.js"></script>
+
+</html>
