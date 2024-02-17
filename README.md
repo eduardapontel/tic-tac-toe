@@ -4,12 +4,11 @@ Welcome to Tic-Tac-Toe, where two adorable animals, a cat and a dog, compete for
 
 ## Game Instructions
 
-1. Open the `index.html` file in your browser.
-2. Choose to be either the Cat (X) or the Dog (O).
-3. The game starts with the Cat always playing first.
-4. Click on an empty cell to place your animal's symbol on the grid.
-5. The goal is to get three symbols of your animal in a row (horizontal, vertical, or diagonal) to win.
-6. The game ends when a player wins or there is a draw.
+1. Open the `eduardapontel.github.io/tic-tac-toe/` link in your browser.
+2. The game starts with the Cat always playing first.
+3. Click on an empty cell to place your animal's symbol on the grid.
+4. The goal is to get three symbols of your animal in a row (horizontal, vertical, or diagonal) to win.
+5. The game ends when a player wins or there is a draw.
 
 ## How to Play
 
