@@ -1,6 +1,6 @@
 # Tic-Tac-Toe - Cat vs Dog
 
-Welcome to Tic-Tac-Toe, where two adorable animals, a cat and a dog, compete for victory! This simple game was developed using HTML, CSS, and JavaScript. Challenge a friend to see who's the master of Tic-Tac-Toe among the pets!
+Welcome to Tic-Tac-Toe, where two adorable animals, a cat and a dog, compete for victory! Challenge a friend to see who's the winner of Tic-Tac-Toe among the pets!
 
 ## Game Instructions
 
@@ -31,6 +31,6 @@ Welcome to Tic-Tac-Toe, where two adorable animals, a cat and a dog, compete for
 
 ## How to Contribute
 
-If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. This game is a great opportunity for beginners to practice their HTML, CSS, and JavaScript skills.
+If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 Enjoy playing, and may the best pet win! 🐱🐶
