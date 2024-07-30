@@ -1,8 +1,9 @@
-let board = ['', '', '', '', '', '', '', '', ''];
+let board = Array(9).fill('');
 let playerTime = 0;
-let symbols = ['x', 'o'];
+const symbols = ['x', 'o'];
 let gameOver = false;
-let winStates = [
+
+const winStates = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -13,54 +14,29 @@ let winStates = [
     [2, 4, 6],
 ];
 
-function reset() {
-    board = ['', '', '', '', '', '', '', '', ''];
-    playerTime = 0;
-    gameOver = false;
-    result.style.display = 'none';
-}
-
 function handleMove(position) {
-    if (gameOver) {
-        return;
-    }
+    if (gameOver || board[position] !== '') return false;
 
-    if (board[position] == '') {
-        board[position] = symbols[playerTime];
+    board[position] = symbols[playerTime];
+    gameOver = checkWinner() || checkTie();
 
-        gameOver = hasWinner() || hasTie();
-        if (hasTie()) {
-            playerTime = -1;
-        } else if (!gameOver) {
-            playerTime = playerTime == 0 ? 1 : 0;
-        }
+    if (!gameOver) {
+        playerTime = 1 - playerTime;
     }
 
     return gameOver;
 }
 
-function hasWinner() {
-    for (let i = 0; i < winStates.length; i++) {
-        let seq = winStates[i];
-
-        let pos1 = seq[0];
-        let pos2 = seq[1];
-        let pos3 = seq[2];
-
-        if (board[pos1] == board[pos2] && board[pos2] == board[pos3] && board[pos1] != '') {
+function checkWinner() {
+    for (const seq of winStates) {
+        const [pos1, pos2, pos3] = seq;
+        if (board[pos1] === board[pos2] && board[pos2] === board[pos3] && board[pos1] !== '') {
             return true;
         }
     }
-
     return false;
 }
 
-function hasTie() {
-    for (let i = 0; i < board.length; i++) {
-        if (board[i] == '') {
-            return false;
-        }
-    }
-
-    return true;
+function checkTie() {
+    return !checkWinner() && board.every(pos => pos !== '');
 }
