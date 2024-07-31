@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+
+    <main class="stage">
+        <div class="row">
+            <div id="0" class="square"></div>
+            <div id="1" class="square"></div>
+            <div id="2" class="square"></div>
+        </div>
+        <div class="row">
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div>
+        </div>
+        <div class="row">
+            <div id="6" class="square"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square"></div>
+        </div>
+    </main>
+
+    <div id="result" class="overlay">
+        <div id="winner"></div>
+        <input id="restart" class="button" type="button" value="RESTART">
+    </div>
+
+    <div id="select" class="overlay">
+        <div id="container" class="bot-select">
+            <h3>Do you want to play <br> against the bot?</h3>
+            <div class="button-group">
+                <input id="yes" class="button" type="button" value="YES">
+                <input id="no" class="button" type="button" value="NO">
+            </div>
+        </div>
+
+        <div class="pet-select">
+            <h3>Choose your pet</h3>
+            <div class="pet-options">
+                <div class="pet-option">
+                    <input type="radio" name="pet-input" value="cat" id="cat-input">
+                    <label for="cat-input" id="cat"></label>
+                </div>
+                <div class="pet-option">
+                    <input type="radio" name="pet-input" value="dog" id="dog-input">
+                    <label for="dog-input" id="dog"></label>
+                </div>
+            </div>
+            <input id="start" class="button" type="button" value="START" disabled>
+        </div>
+    </div>
+
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/interface.js"></script>
+</body>
+
+</html>
