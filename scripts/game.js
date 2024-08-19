@@ -48,15 +48,15 @@ function checkTie() {
 
 function getBestMove() {
     for (const [a, b, c] of winStates) {
-        if (board[a] === symbols[playerTime] && board[a] === board[b] && !board[c]) return c;
-        if (board[a] === symbols[playerTime] && board[a] === board[c] && !board[b]) return b;
-        if (board[b] === symbols[playerTime] && board[b] === board[c] && !board[a]) return a;
-    }
-
-    for (const [a, b, c] of winStates) {
         if (board[a] === symbols[1 - playerTime] && board[a] === board[b] && !board[c]) return c;
         if (board[a] === symbols[1 - playerTime] && board[a] === board[c] && !board[b]) return b;
         if (board[b] === symbols[1 - playerTime] && board[b] === board[c] && !board[a]) return a;
+    }
+
+    for (const [a, b, c] of winStates) {
+        if (board[a] === symbols[playerTime] && board[a] === board[b] && !board[c]) return c;
+        if (board[a] === symbols[playerTime] && board[a] === board[c] && !board[b]) return b;
+        if (board[b] === symbols[playerTime] && board[b] === board[c] && !board[a]) return a;
     }
 
     const positions = [4, 0, 2, 6, 8, 1, 3, 5, 7];
